@@ -7,6 +7,9 @@ import Cart from "./features/cart/Cart";
 import CreateOrder, { action } from "./features/order/CreateOrder";
 import AppLayout from "./ui/AppLayout";
 import Order, { loader as orderLoader } from "./features/order/Order";
+import PizzaDetails, {
+  loader as PizzaLoader,
+} from "./features/menu/PizzaDetails";
 import { action as updateOrderAction } from "./features/order/UpdateOrder";
 
 const router = createBrowserRouter([
@@ -23,6 +26,11 @@ const router = createBrowserRouter([
         element: <Menu />,
         loader: menuLoader,
         errorElement: <Error />,
+      },
+      {
+        path: "/menu/:pizzaId",
+        element: <PizzaDetails />,
+        loader: PizzaLoader,
       },
       {
         path: "/cart",
