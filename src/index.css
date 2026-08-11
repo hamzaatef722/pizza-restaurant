@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Brand palette */
+  --color-base:        #180F08;
+  --color-surface:     #231508;
+  --color-fire:        #C13708;
+  --color-fire-dark:   #9E2D06;
+  --color-ember:       #DE7A1E;
+  --color-cream:       #F3EDE5;
+  --color-cream-dark:  #E5DDD0;
+  --color-smoke:       #9E9087;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F3EDE5;
+    color: #180F08;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #C13708;
+    color: #ffffff;
+  }
+
+  /* Smooth scroll for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* ── Inputs ────────────────────────────────── */
+  .input {
+    @apply w-full rounded-sm border border-cream-dark bg-white px-4 py-3 text-sm text-base
+      placeholder:text-stone-400 transition-all duration-200
+      focus:outline-none focus:ring-2 focus:ring-fire focus:border-transparent;
+  }
+
+  /* Input on dark/hero background */
+  .input-dark {
+    @apply rounded-sm border border-white/20 bg-white/10 px-4 py-3 text-sm text-white
+      placeholder:text-white/50 backdrop-blur-sm transition-all duration-200
+      focus:outline-none focus:ring-2 focus:ring-ember focus:border-transparent;
+  }
+
+  /* Tag pill (vegetarian, popular, etc.) */
+  .tag {
+    @apply inline-block border border-stone-300 px-2 py-0.5 text-[10px] font-semibold
+      uppercase tracking-widest text-stone-500;
+  }
+
+  /* ── Page section wrapper ───────────────────── */
+  .page-wrapper {
+    @apply mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8;
+  }
+
+  /* ── Eyebrow label ──────────────────────────── */
+  .eyebrow {
+    @apply font-display text-xs font-semibold uppercase tracking-[0.3em] text-ember;
+  }
+
+  /* ── Section heading ────────────────────────── */
+  .section-heading {
+    @apply font-display text-4xl font-black uppercase text-base leading-none;
+  }
+
+  /* ── Loading animation ──────────────────────── */
+  .loader {
+    width: 42px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(#C13708 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% { background-position: 0% 0%,   50% 50%,  100% 50%; }
+    40% { background-position: 0% 100%, 50% 0%,   100% 50%; }
+    60% { background-position: 0% 50%,  50% 100%, 100% 0%;  }
+    80% { background-position: 0% 50%,  50% 50%,  100% 100%;}
+  }
+
+  /* ── Divider line ───────────────────────────── */
+  .divider {
+    @apply border-t border-cream-dark;
+  }
+
+  /* ── Status badge ───────────────────────────── */
+  .badge {
+    @apply inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-sm;
+  }
+}
