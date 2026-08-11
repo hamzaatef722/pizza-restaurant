@@ -8,7 +8,7 @@ function Menu() {
   return (
     <div className="bg-cream min-h-full">
       {/* Menu header */}
-      <div className="border-cream-dark bg-cream border-b px-6 py-8 sm:px-8 lg:px-12">
+      <div className="border-cream-dark bg-cream border-b px-6 py-8 sm:px-8 lg:px-12 text-center">
         <div className="tex mx-auto max-w-5xl">
           <p className="eyebrow mb-2">Our Menu</p>
           <h2 className="section-heading">{menu.length} Items</h2>
