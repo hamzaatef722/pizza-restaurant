@@ -32,7 +32,7 @@ function MenuItem({ pizza }) {
       }`}
     >
       {/* ── Pizza image ── */}
-      <div className="bg-cream-dark relative h-44 overflow-hidden">
+      <div className="bg-cream-dark relative h-32 sm:h-44 overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}
@@ -63,7 +63,7 @@ function MenuItem({ pizza }) {
 
       {/* ── Card header: name + price ── */}
       <div className="border-cream-dark flex items-start justify-between gap-4 border-b px-5 pt-4 pb-3">
-        <h3 className="font-display text-base text-lg leading-tight font-black tracking-wide uppercase">
+        <h3 className="font-display text-base sm:text-lg leading-tight font-black tracking-wide uppercase">
           {name}
         </h3>
 
