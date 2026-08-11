@@ -27,12 +27,12 @@ function MenuItem({ pizza }) {
 
   return (
     <li
-      className={`border-cream-dark flex flex-col border bg-white transition-shadow duration-200 hover:shadow-md hover:shadow-black/5 ${
+      className={`mx-auto w-full max-w-[320px] sm:max-w-none border-cream-dark flex flex-col border bg-white transition-shadow duration-200 hover:shadow-md hover:shadow-black/5 ${
         soldOut ? "opacity-60" : ""
       }`}
     >
       {/* ── Pizza image ── */}
-      <div className="bg-cream-dark relative h-32 sm:h-44 overflow-hidden">
+      <div className="bg-cream-dark relative h-44 overflow-hidden">
         {imageUrl ? (
           <img
             src={imageUrl}
