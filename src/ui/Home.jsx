@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div
-      className="relative flex h-[92dvh] items-center overflow-hidden"
+      className="relative flex h-[95dvh] items-center overflow-hidden"
       style={{ background: "#180F08" }}
     >
       {/* Background image */}
