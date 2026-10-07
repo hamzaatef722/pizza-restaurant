@@ -1,18 +1,17 @@
-# 🍿 Popcorn
+# 🍕 Pizza Restaurant
 
-A movie-themed web app built with React, with smooth animations and carousel-based browsing.
+A pizza ordering web app built with React. Customers browse the menu, build a cart, and place an order, all in a fast single-page experience.
 
-<!-- Add a one-line description of what the app actually does, a live demo link, and a screenshot or GIF here:
-**Live demo:** [your-link.vercel.app](https://your-link.vercel.app)
-![App screenshot](./public/screenshot.png)
--->
+**Live demo:** [pizza-restaurant-zeta.vercel.app](https://pizza-restaurant-zeta.vercel.app)
+
+<!-- Add a screenshot or GIF here: ![App screenshot](./public/screenshot.png) -->
 
 ## Features
 
-- Browse content in swipeable carousels
-- Animated page and component transitions
-- Client-side routing between pages
-- Global state managed with Redux Toolkit
+- Browse the pizza menu
+- Add, remove, and update items in the cart
+- Place an order with customer details
+- Track an order by its ID
 - Responsive layout built with Tailwind CSS
 
 <!-- Edit this list so it matches exactly what your app does. -->
@@ -24,12 +23,10 @@ A movie-themed web app built with React, with smooth animations and carousel-bas
 | UI | React 18 |
 | Routing | React Router 6 |
 | State management | Redux Toolkit, React Redux |
-| Styling | Tailwind CSS 3, PostCSS, Autoprefixer |
-| Animation | Framer Motion |
-| Carousels | Swiper |
-| Icons | React Icons |
-| Build tool | Vite 5 |
-| Code quality | ESLint, Prettier |
+| Styling | Tailwind CSS 4 |
+| Build tool | Vite |
+| Code quality | ESLint, Prettier (with the Tailwind plugin) |
+| Deployment | Vercel |
 
 ## Getting Started
 
@@ -42,8 +39,8 @@ A movie-themed web app built with React, with smooth animations and carousel-bas
 
 ```bash
 # Clone the repository
-git clone https://github.com/hamzaatef722/Popcorn.git
-cd Popcorn
+git clone https://github.com/hamzaatef722/pizza-restaurant.git
+cd pizza-restaurant
 
 # Install dependencies
 npm install
@@ -66,21 +63,25 @@ The app will be available at `http://localhost:5173`.
 ## Project Structure
 
 ```
-Popcorn/
+pizza-restaurant/
 ├── public/          Static assets
 ├── src/             Application source code
-├── package.json
-└── .gitignore
+├── index.html       App entry HTML
+├── vite.config.js   Vite configuration
+├── vercel.json      Vercel deployment config
+└── package.json
 ```
 
-<!-- Expand the src/ folder here (components, pages, store, etc.) once you're happy with the structure. -->
+## Deployment
+
+The project is deployed on [Vercel](https://vercel.com). Every push to `main` triggers a new deployment, and `vercel.json` handles client-side routing so deep links work on refresh.
 
 ## What I Learned
 
-- Managing global state with Redux Toolkit slices
-- Building animated interfaces with Framer Motion
-- Creating touch-friendly carousels with Swiper
-- Styling a full app with Tailwind CSS
+- Structuring global state (cart and user) with Redux Toolkit slices
+- Routing with React Router, including data loading and form actions
+- Styling a full app with Tailwind CSS 4 and the Vite plugin
+- Shipping a React app to production on Vercel
 
 ## Author
 
